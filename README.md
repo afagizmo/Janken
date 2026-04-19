@@ -35,11 +35,28 @@ You can check the status of a deployment by going to the **Actions** tab in your
 
 ### What you need
 
-- [Git](https://git-scm.com/downloads) installed on your computer.
 - A code editor. [Visual Studio Code](https://code.visualstudio.com/) (VS Code) is a great free option.
 - A GitHub account with access to this repository.
+- A way to sync your changes with GitHub. Pick **one** of the following:
+  - [GitHub Desktop](https://desktop.github.com/) — a beginner-friendly app with a visual interface (no terminal needed).
+  - [Git](https://git-scm.com/downloads) — the command-line tool, used from a terminal or from within VS Code.
 
 ### Getting started (first time only)
+
+You need to **clone** (download) the repository to your computer once. After that you can edit files locally and push changes whenever you like.
+
+#### Option A: Using GitHub Desktop
+
+1. Open GitHub Desktop and sign in with your GitHub account.
+2. Click **File > Clone repository**.
+3. Select the **URL** tab and paste:
+   ```
+   https://github.com/afagizmo/Janken.git
+   ```
+4. Choose a local folder (e.g. `Documents/GitHub`) and click **Clone**.
+5. Once cloned, click **Open in Visual Studio Code** (or your preferred editor) to start editing files in the `src/` folder.
+
+#### Option B: Using the terminal
 
 1. Open a terminal (Command Prompt, PowerShell, or the built-in terminal in VS Code).
 2. Navigate to the folder where you want to store the project:
@@ -59,18 +76,26 @@ You now have a local copy of the project. You can open and edit any file in the 
 
 ### Making changes and publishing them
 
-After you have edited your files, follow these steps to push your changes live:
+After you have edited and saved your files, you need to **commit** (save a snapshot) and **push** (upload) them to GitHub. Pick whichever workflow you are most comfortable with.
 
-1. **Save your files** in VS Code (Ctrl+S).
-2. Open the **Source Control** panel in VS Code by clicking the branch icon in the left sidebar (or press Ctrl+Shift+G).
+#### Option A: Using GitHub Desktop
+
+1. Open GitHub Desktop. It will automatically detect your changed files and list them on the left.
+2. Make sure the files you want to include are checked.
+3. At the bottom-left, type a short summary of what you changed, for example: `Update homepage heading`.
+4. Click **Commit to main**.
+5. Click **Push origin** at the top of the window to upload your commit to GitHub.
+
+#### Option B: Using VS Code
+
+1. **Save your files** (Ctrl+S).
+2. Open the **Source Control** panel by clicking the branch icon in the left sidebar (or press Ctrl+Shift+G).
 3. You will see a list of changed files. Click the **+** icon next to each file to **stage** it (this tells Git which changes you want to include).
 4. Type a short description of what you changed in the message box at the top, for example: `Update homepage heading`.
 5. Click the **Commit** button (checkmark icon) to save the changes locally.
 6. Click **Sync Changes** (or the push/pull arrows) to upload your commit to GitHub.
 
-That's it. GitHub Actions will pick up your push and deploy the updated site automatically.
-
-**Using the terminal instead of the VS Code UI:**
+#### Option C: Using the terminal
 
 ```
 git add .
@@ -78,12 +103,15 @@ git commit -m "Update homepage heading"
 git push
 ```
 
+Whichever option you use, GitHub Actions will pick up your push and deploy the updated site automatically.
+
 ### Pulling the latest changes
 
 If someone else has pushed changes, you need to pull them before you start working so you have the latest version:
 
-- In VS Code: click the **Sync Changes** button, or
-- In the terminal:
+- **GitHub Desktop:** click **Fetch origin** at the top. If there are new changes, click **Pull origin**.
+- **VS Code:** click the **Sync Changes** button in the Source Control panel.
+- **Terminal:**
   ```
   git pull
   ```
