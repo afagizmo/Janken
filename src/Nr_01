@@ -1,1 +1,19 @@
-Lag favoritt drinken til Janken
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janken 60 stolpejakt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>STOLPE 1</h1>
+    </header>
+
+    <main>
+         <p>Her er oppgaven å blande den ultimate drinken til Janken</p>
+        <p>Hvis dere kjenner Janken rett så skal dette være en enkel oppgave!</p>
+    </main>
+  </body>
+</html>
