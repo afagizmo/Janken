@@ -1,168 +1,85 @@
-```css
-/* Animert bakgrunn med gradient og flytende bobler */
-
-/* Hovedbakgrunn med gradientanimasjon */
+/* ===== Generelt ===== */
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  position: relative;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e7f2);
+    color: #222;
 }
 
-/* Gradient animasjonskeyframes */
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* ===== Header ===== */
+header {
+    background: linear-gradient(90deg, #008000, #00b300);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Flytende bobler */
-.bubble {
-  position: fixed;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  animation: float 20s infinite;
-  pointer-events: none;
-  z-index: -1;
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-/* Bubble størrelser og posisjoner */
-.bubble:nth-child(1) {
-  width: 80px;
-  height: 80px;
-  left: 10%;
-  animation-duration: 8s;
-  animation-delay: 0s;
+/* ===== Hovedkort ===== */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease;
 }
 
-.bubble:nth-child(2) {
-  width: 120px;
-  height: 120px;
-  right: 20%;
-  animation-duration: 10s;
-  animation-delay: 1s;
+.container:hover {
+    transform: translateY(-4px);
 }
 
-.bubble:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  left: 30%;
-  animation-duration: 12s;
-  animation-delay: 2s;
+/* ===== Tekst ===== */
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #444;
 }
 
-.bubble:nth-child(4) {
-  width: 100px;
-  height: 100px;
-  right: 15%;
-  animation-duration: 9s;
-  animation-delay: 3s;
+/* ===== Lenker / stolper ===== */
+.container a {
+    display: block;
+    margin: 12px 0;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #0077ff, #00aaff);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,119,255,0.25);
 }
 
-.bubble:nth-child(5) {
-  width: 150px;
-  height: 150px;
-  left: 50%;
-  animation-duration: 11s;
-  animation-delay: 4s;
+.container a:hover {
+    background: linear-gradient(90deg, #005fd1, #0088cc);
+    transform: translateX(6px);
+    box-shadow: 0 6px 14px rgba(0,119,255,0.35);
 }
 
-.bubble:nth-child(6) {
-  width: 70px;
-  height: 70px;
-  right: 40%;
-  animation-duration: 13s;
-  animation-delay: 5s;
+/* ===== Responsiv mobil ===== */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .container a {
+        font-size: 1rem;
+        padding: 12px;
+    }
 }
-
-.bubble:nth-child(7) {
-  width: 90px;
-  height: 90px;
-  left: 70%;
-  animation-duration: 14s;
-  animation-delay: 6s;
-}
-
-.bubble:nth-child(8) {
-  width: 110px;
-  height: 110px;
-  right: 60%;
-  animation-duration: 7s;
-  animation-delay: 7s;
-}
-
-/* Bubble flyteanimasjon */
-@keyframes float {
-  0% {
-    transform: translateY(100vh) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(1);
-    opacity: 0;
-  }
-}
-
-/* Ekstra: Snøfnugg eller stjerner */
-.particle {
-  position: fixed;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 20px;
-  animation: fall 15s linear infinite;
-  pointer-events: none;
-  z-index: -1;
-}
-
-@keyframes fall {
-  0% { transform: translateY(-10vh) rotate(0deg); }
-  100% { transform: translateY(100vh) rotate(360deg); }
-}
-
-/* Responsiv tilpasning */
-@media (max-width: 768px) {
-  .bubble {
-    display: none;
-  }
-}
-```
-
-For å bruke denne CSS-filen, må du også legge til følgende HTML-struktur i din HTML-fil:
-
-```html
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animert Bakgrunn</title>
-  <link rel="stylesheet" href="din-css-fil.css">
-</head>
-<body>
-  <!-• Bobler for animasjon -->
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-
-  <!-• Ditt innhold her -->
-  <div style="text-align: center; padding: 50px; color: white;">
-    <h1>Velkommen!</h1>
-    <p>Bakgrunnen har en flytende gradient og bobler som beveger seg oppover.</p>
-  </div>
-</body>
-</html>
-```
