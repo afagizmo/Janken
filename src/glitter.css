@@ -1,82 +1,63 @@
 ```css
-/* Glitter-effekter */
+/• Reset grunnleggende marginer og padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Kroppens stil */
 body {
-    background: linear-gradient(45deg, #ffd700, #ff69b4, #00bfff, #ffd700);
-    background-size: 400% 400%;
-    animation: glitterBackground 3s ease infinite;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-@keyframes glitterBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Overskrifter */
 h1, h2, h3 {
-    background: linear-gradient(45deg, #ffd700, #ff1493, #00ffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.5);
-    animation: glitterText 2s linear infinite;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
-p {
-    color: #fff;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7),
-                 0 0 20px rgba(255, 215, 0, 0.5),
-                 0 0 30px rgba(255, 215, 0, 0.3);
-}
-
-.glitter-box {
-    background: linear-gradient(135deg, #ff69b4, #ffd700, #00bfff);
-    border: 3px solid #ffd700;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    animation: pulseGlow 1.5s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
-    50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.9); }
-}
-
-@keyframes glitterText {
-    0% { opacity: 0.8; }
-    50% { opacity: 1; }
-    100% { opacity: 0.8; }
-}
-
+/* Lenker */
 a {
-    color: #ffd700;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: #3498db;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #ff69b4;
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+  text-decoration: underline;
 }
 
-.button {
-    background: linear-gradient(45deg, #ffd700, #ff69b4);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-    animation: sparkle 2s ease-in-out infinite;
+/* Knapper */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-@keyframes sparkle {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
-    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+button:hover {
+  background-color: #2980b9;
 }
+
+/* Boks layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsivt bilde */
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
