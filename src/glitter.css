@@ -1,5 +1,4 @@
 body {
-	font-family: 'Arial', cursive !important;
   background: #FDE3A7; /*CAPE HONEY*/
 	margin: 0px;
 	padding: 0px;
@@ -12,7 +11,7 @@ body {
 h4 {
 	font-size: 26px;
 	line-height: 1px;
-	font-family: 'Arial', cursive !important;
+	font-family: 'Amatic SC', cursive !important;
 }
 
 .color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
@@ -107,7 +106,7 @@ h4 {
 .card .details p {
 	font-size: 15px;
 	line-height: 5px;
-	transform: rotate(0deg);
+	transform: rotate(-10deg);
 	padding: 0 0 0 20px;
 }
 
@@ -116,5 +115,5 @@ h4 {
 }
 
 .text-right {
-	text-align: center;
+	text-align: right;
 }
