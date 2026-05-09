@@ -1,5 +1,5 @@
 body {
-	font-family: 'Indie Flower', cursive !important;
+	font-family: 'Arial', cursive !important;
   background: #FDE3A7; /*CAPE HONEY*/
 	margin: 0px;
 	padding: 0px;
@@ -12,7 +12,7 @@ body {
 h4 {
 	font-size: 26px;
 	line-height: 1px;
-	font-family: 'Amatic SC', cursive !important;
+	font-family: 'Arial', cursive !important;
 }
 
 .color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
