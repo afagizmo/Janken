@@ -213,3 +213,23 @@ h4 {
   text-align: right;
 
 }
+
+figure {
+
+  text-align: center;
+
+  margin: 0 auto;
+
+}
+
+figure img {
+
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  margin: 0 auto;
+
+}
